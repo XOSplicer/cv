@@ -1,18 +1,21 @@
 body {
-    margin: 40px auto;
-    max-width: 1000px;
-    line-height: 1.5;
-    font-size: 16px;
+    margin: 2em auto;
+    max-width: 800px;
+    line-height: 1.2;
+    font-size: 14px;
     color: #454545;
     padding: 0 10px;
     font-family: 'Open Sans', sans-serif;
     display: grid;
     grid-template:
         "header image"
+        "split split"
         "main other"
         "footer footer";
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
 }
 
 
@@ -25,6 +28,16 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: end;
+}
+
+.image img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.split {
+    grid-area: split;
+    border-bottom: solid 1px #A5A5A5;
 }
 
 .main {
@@ -40,10 +53,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-h1, h2, h3 {
-    line-height: 1.2;
+    border-top: solid 1px #A5A5A5;
+    padding-top: 1em;
 }
 
 section h2,
@@ -54,35 +65,47 @@ section h1 {
 
 .personal h1 {
     font-size: 3em;
+    font-weight: bolder;
 }
 
 section h2 {
     font-size: 1.6em;
     color: #0060FF;
+    font-weight: bolder;
+}
+
+.experience-item,
+.education-item,
+.activity-item {
+    display: grid;
+    grid-template:
+        "title title"
+        "what when"
+        "details details";
+}
+
+section h3 {
+    grid-area: title;
 }
 
 section .where {
-
+    display: none;
 }
 
 section .when {
-
+    grid-area: when;
+    justify-self: end;
 }
 
-section .role {
-
-}
-
+section .role,
 section .degree {
-
+    grid-area: what;
+    font-weight: bold;
 }
 
 section .details {
+    grid-area: details;
     font-family: 'Merriweather', serif;
     margin-top: 1em;
-}
-
-.image img {
-    max-width: 80%;
-    max-height: 80%;
+    line-height: 1.5;
 }
