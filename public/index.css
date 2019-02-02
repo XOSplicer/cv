@@ -1,0 +1,88 @@
+body {
+    margin: 40px auto;
+    max-width: 1000px;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #454545;
+    padding: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    grid-template:
+        "header image"
+        "main other"
+        "footer footer";
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+}
+
+
+header {
+    grid-area: header;
+}
+
+.image {
+    grid-area: image;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.main {
+    grid-area: main;
+}
+
+.other {
+    grid-area: other;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+section h2,
+section h1 {
+    font-family: 'Coda', sans-serif;
+    text-transform: uppercase;
+}
+
+.personal h1 {
+    font-size: 3em;
+}
+
+section h2 {
+    font-size: 1.6em;
+    color: #0060FF;
+}
+
+section .where {
+
+}
+
+section .when {
+
+}
+
+section .role {
+
+}
+
+section .degree {
+
+}
+
+section .details {
+    font-family: 'Merriweather', serif;
+    margin-top: 1em;
+}
+
+.image img {
+    max-width: 80%;
+    max-height: 80%;
+}
