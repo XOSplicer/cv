@@ -14,7 +14,7 @@ body {
         "footer footer";
     grid-template-rows: auto;
     grid-template-columns: auto;
-    grid-column-gap: 2em;
+    grid-column-gap: 4em;
     grid-row-gap: 2em;
 }
 
@@ -129,7 +129,7 @@ section .details {
     font-family: "Merriweather", serif;
     margin-top: 1em;
     line-height: 1.5;
-    max-width: 90%;
+    /* max-width: 90%; */
     text-align: justify;
     text-justify: inter-word;
 }
