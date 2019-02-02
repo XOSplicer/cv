@@ -1,10 +1,10 @@
 body {
-    margin: 2em auto;
+    margin: 0 auto;
     max-width: 65em;
     line-height: 1.2;
     font-size: 14px;
     color: #454545;
-    padding: 0 10px;
+    padding: 2em 2em;
     font-family: "Open Sans", sans-serif;
     display: grid;
     grid-template:
@@ -16,6 +16,18 @@ body {
     grid-template-columns: auto;
     grid-column-gap: 2em;
     grid-row-gap: 2em;
+}
+
+@media(max-width: 600px) {
+    body {
+        grid-template:
+            "header"
+            "image"
+            "split"
+            "main"
+            "other"
+            "footer";
+    }
 }
 
 
